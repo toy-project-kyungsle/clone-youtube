@@ -1,0 +1,332 @@
+:root {
+  /* color*/
+  --color-white: #ffffff;
+  --color-black: rgb(18, 7, 0);
+  --color-Lightblue: rgb(6, 95, 212);
+  --color-Lightblack: rgb(96, 96, 96);
+  --color-darkgrey: #757575;
+  --color-Lightgrey: #eeeeee;
+  --color-red: red;
+  /*spacing*/
+  --spacing-standard: 10px;
+  --spacing-large: 20px;
+  /*font-size*/
+  --font-large: 18px;
+  --font-medium: 15px;
+  --font-small: 12px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-white);
+}
+
+body {
+  font-family: Roboto;
+  margin: 0;
+  padding: 0;
+}
+
+button,
+button:focus {
+  border: none;
+  cursor: pointer;
+  outline: none;
+  background-color: var(--color-white);
+}
+
+/*Navbar*/
+.navbar {
+  display: flex;
+  background-color: var(--color-black);
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .YoutubeLogo {
+  padding: var(--spacing-standard);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.navbar .YoutubeLogo i {
+  padding: 0 3px;
+  color: var(--color-red);
+}
+
+.navbar span {
+  color: var(--color-white);
+  font-size: var(--font-large);
+}
+
+.navbar .tool {
+  padding: var(--spacing-standard);
+  display: flex;
+  align-items: center;
+}
+
+.navbar .tool i {
+  cursor: pointer;
+  padding: 5px;
+  color: var(--color-white);
+}
+
+.navbar .tool input {
+  display: none;
+}
+
+.navbar .tool input.active {
+  display: block;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  border: none;
+  border-bottom: 1px solid var(--color-white);
+}
+
+.navbar .tool input:focus {
+  outline: none;
+}
+
+/*MoreInfo*/
+.moreinfo {
+  display: none;
+}
+
+.moreinfo.active {
+  display: block;
+  width: 200px;
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  margin-right: 2%;
+  padding: 0 5px;
+  background-color: var(--color-white);
+}
+
+.moreinfo.active div {
+  padding: var(--spacing-standard) 0;
+  cursor: pointer;
+  overflow: visible;
+  text-overflow: ellipsis;
+}
+
+.moreinfo.active i {
+  color: var(--color-red);
+  margin: 0 var(--spacing-standard);
+  width: 13%;
+}
+
+.moreinfo.active span {
+  width: 100px;
+  white-space: nowrap;
+  font-size: var(--font-medium);
+}
+
+.moreinfo.active div:hover {
+  background-color: var(--color-Lightgrey);
+}
+
+/*Media Player*/
+.player {
+  text-align: center;
+  background-color: var(--color-black);
+}
+
+.player video {
+  width: 100%;
+  height: 100%;
+  max-width: 1000px;
+}
+
+/*Main Information*/
+.Maininfo {
+  padding: var(--spacing-standard) var(--spacing-large);
+}
+
+/*Hashtag*/
+.Maininfo .hashtag a {
+  color: var(--color-Lightblue);
+  font-size: var(--font-medium);
+}
+
+/*Main Title*/
+.Maininfo .title {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+}
+
+.Maininfo .title .letters {
+  margin-right: var(--spacing-standard);
+  font-size: var(--font-medium);
+}
+
+.Maininfo .title .letters.clamp {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+/*Caret of Main Title*/
+.Maininfo .title .caret {
+  transition: transform 300ms ease-in-out;
+}
+
+.Maininfo .title .caret.clicked {
+  transform: rotate(180deg);
+}
+
+/*Views*/
+.Maininfo .views {
+  color: var(--color-Lightblack);
+  padding-bottom: var(--spacing-standard);
+  font-size: var(--font-small);
+}
+
+/*Main Information Logos*/
+.Maininfo .logo {
+  padding: 0 10%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Maininfo .logo button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--color-darkgrey);
+}
+
+.Maininfo .logo span {
+  margin: 0 auto;
+  font-size: var(--font-small);
+}
+
+.Maininfo .logo button i {
+  margin: var(--spacing-standard) 0;
+}
+
+.Maininfo .logo .Up.active {
+  color: var(--color-Lightblue);
+}
+
+.Maininfo .logo .Down.active {
+  color: var(--color-Lightblue);
+}
+
+/*Provider's Profile*/
+.Main .profile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px 30px 0 20px;
+}
+
+.line {
+  width: 90%;
+}
+
+.Main .profile .provider {
+  display: flex;
+  align-items: center;
+}
+
+.Main .profile img {
+  cursor: pointer;
+  width: 60px;
+  border-radius: 70%;
+}
+
+.Main .profile .letters {
+  display: flex;
+  flex-direction: column;
+  padding: 0 15px;
+}
+
+.Main .profile .letters .name {
+  cursor: pointer;
+  padding-left: 0;
+  font: bold;
+  font-size: var(--spacing-large);
+}
+
+.Main .profile .letters .subscriber {
+  font-size: var(--font-small);
+}
+
+.Main .profile .letters span {
+  padding: 5px 0;
+}
+
+/*Subscribe*/
+.Main .profile .subsribe {
+  font-size: var(--font-large);
+  color: var(--color-red);
+  background-color: var(--color-white);
+  font: bold;
+}
+
+/*Sub Information*/
+.Subinfo .Upnext {
+  margin: 0 var(--spacing-large);
+}
+
+.Subinfo div {
+  padding: 2px 0;
+}
+
+.Subinfo img {
+  width: 100%;
+}
+
+.Subinfo .videos {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+.Subinfo img {
+  width: 35%;
+  margin: var(--spacing-standard) var(--spacing-standard) 0 var(--spacing-large);
+}
+
+/*Inner video box*/
+.Subinfo .videos .box {
+  width: 59%;
+  margin: 0 var(--spacing-standard);
+  display: flex;
+  flex-direction: column;
+}
+
+.Subinfo .videos .box .title {
+  font-size: var(--font-medium);
+}
+
+.Subinfo .videos .box .name {
+  font-size: var(--font-small);
+}
+
+.Subinfo .videos .box .views {
+  font-size: var(--spacing-standard);
+}
+
+.Subinfo .videos .ellipsis {
+  width: 6%;
+}
+
+/*Display when PC*/
+@media screen and (min-width: 1024px) {
+  .Main {
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
+  }
+
+  .Subinfo {
+    display: inline-block;
+    width: 50%;
+  }
+}
