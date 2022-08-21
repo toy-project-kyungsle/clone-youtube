@@ -8,3 +8,5 @@
 
 <br>
 <a href="https://github.com/keinn51/Youtube_Page_Clone/wiki">Wiki</a>에 클론코딩 시에 유용한 개념들을 정리했습니다.
+
+![image](https://user-images.githubusercontent.com/79993356/185794867-5645a97e-1416-4787-9051-765dc7102ed2.png)
